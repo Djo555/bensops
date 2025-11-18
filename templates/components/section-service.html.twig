@@ -1,5 +1,5 @@
 <section class="container my-5" id="description">
-	<h2 class="text-center mb-2 text-uppercase fw-bold">Prestations d'enquêtes les plus demandées</h2>
+	<h2 class="text-center mb-2 text-uppercase fw-bold">Nos spécialisations</h2>
 	<p class="text-center text-muted mb-4">Services d'investigation fiables et compatibles avec une finalité probatoire — solutions adaptées aux particuliers et aux professionnels.</p>
 
 	<div class="row align-items-center">
@@ -255,7 +255,8 @@
 		}
 
 		.service-item:hover .hover-note,
-		.service-item:focus-within .hover-note {
+		.service-item:focus-within .hover-note,
+		.service-item.active .hover-note {
 			opacity: 1;
 			transform: translateY(0) scale(1);
 		}
@@ -265,6 +266,14 @@
             .service-item .hover-note {
                 opacity: 1 !important;
                 transform: translateY(0) scale(1) !important;
+            }
+        }
+
+        /* Sur tablette (768px et plus), garder le badge visible au clic */
+        @media (min-width: 768px) and (hover: none) {
+            .service-item .hover-note {
+                opacity: 1;
+                transform: translateY(0) scale(1);
             }
         }
 
